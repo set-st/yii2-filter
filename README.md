@@ -18,13 +18,13 @@ Yii2-filter
 Выполнить команду
 
 ```
-php composer require dvizh/yii2-filter "@dev"
+php composer require set_st/yii2-filter "@dev"
 ```
 
 Или добавить в composer.json
 
 ```
-"dvizh/yii2-filter": "@dev",
+"set_st/yii2-filter": "@dev",
 ```
 
 И выполнить
@@ -36,7 +36,7 @@ php composer update
 Далее, мигрируем базу:
 
 ```
-php yii migrate --migrationPath=vendor/dvizh/yii2-filter/src/migrations
+php yii migrate --migrationPath=vendor/set_st/yii2-filter/src/migrations
 ```
 
 Подключение и настройка
@@ -47,7 +47,7 @@ php yii migrate --migrationPath=vendor/dvizh/yii2-filter/src/migrations
     'modules' => [
         //...
         'filter' => [
-            'class' => 'dvizh\filter\Module',
+            'class' => 'set_st\filter\Module',
             'relationFieldName' => 'category_id', //Наименование поля, по значению которого будут привязыватья опции
             //callback функция, которая возвращает варианты relationFieldName
             'relationFieldValues' =>
@@ -81,7 +81,7 @@ php yii migrate --migrationPath=vendor/dvizh/yii2-filter/src/migrations
     function behaviors() {
         return [
             'filter' => [
-                'class' => 'dvizh\filter\behaviors\AttachFilterValues',
+                'class' => 'set_st\filter\behaviors\AttachFilterValues',
             ],
         ];
     }
@@ -104,7 +104,7 @@ php yii migrate --migrationPath=vendor/dvizh/yii2-filter/src/migrations
     {
        return [
            'filter' => [
-               'class' => 'dvizh\filter\behaviors\Filtered',
+               'class' => 'set_st\filter\behaviors\Filtered',
            ],
        ];
     }
@@ -154,13 +154,13 @@ $productsFind = Product::find()->option('power', 100, '<')->all(); //Все за
 Блок выбора значений для опций модели $model (опция будет выведена, только если к данной модели через поле relationFieldName привязаны какие-то опции)
 
 ```php
-<?=\dvizh\filter\widgets\Choice::widget(['model' => $model]);?>
+<?=\set_st\filter\widgets\Choice::widget(['model' => $model]);?>
 ```
 
 Вывод блока с фильтрами (галочки, радиобаттоны и т.д.). Передается идентификатор, к которому привязаны фильтры по полю relationFieldName (чаще всего - ID категории)
 
 ```php
-<?=\dvizh\filter\widgets\FilterPanel::widget(['itemId' => $model->id]);?>
+<?=\set_st\filter\widgets\FilterPanel::widget(['itemId' => $model->id]);?>
 ```
 * itemId - значение relationFieldName
 
@@ -175,7 +175,7 @@ if(Yii::$app->request->get('filter')) {
 Чтобы FilterPanel работал по ajax, необходимо сконфигурировать его следующим образом:
 
 ```php
-<?=\dvizh\filter\widgets\FilterPanel::widget(['itemId' => $model->id, 'findModel' => $query, 'ajaxLoad' => true, 'resultHtmlSelector' => '#productsList']);
+<?=\set_st\filter\widgets\FilterPanel::widget(['itemId' => $model->id, 'findModel' => $query, 'ajaxLoad' => true, 'resultHtmlSelector' => '#productsList']);
 ```
 
 Где resultHtmlSelector - это CSS селектор элемента, в котором выводятся продукты на странице, findModel - экземпляр AQ продуктов.

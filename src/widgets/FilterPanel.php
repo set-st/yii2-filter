@@ -1,5 +1,5 @@
 <?php
-namespace dvizh\filter\widgets;
+namespace set_st\filter\widgets;
 
 use yii\helpers\Html;
 use yii\helpers\Url;
@@ -28,9 +28,9 @@ class FilterPanel extends \yii\base\Widget
         parent::init();
 
         if($this->ajaxLoad) {
-            \dvizh\filter\assets\FrontendAjaxAsset::register($this->getView());
+            \set_st\filter\assets\FrontendAjaxAsset::register($this->getView());
         } else {
-            \dvizh\filter\assets\FrontendAsset::register($this->getView());
+            \set_st\filter\assets\FrontendAsset::register($this->getView());
         }
     }
 

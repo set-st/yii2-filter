@@ -1,5 +1,5 @@
 <?php
-namespace dvizh\filter\behaviors;
+namespace set_st\filter\behaviors;
 
 use yii;
 use yii\base\Behavior;

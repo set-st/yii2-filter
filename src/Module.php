@@ -1,5 +1,5 @@
 <?php
-namespace dvizh\filter;
+namespace set_st\filter;
 
 use yii;
 

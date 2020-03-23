@@ -5,7 +5,7 @@ use yii\helpers\Url;
 $this->title = 'Фильтры и опции';
 $this->params['breadcrumbs'][] = $this->title;
 
-\dvizh\filter\assets\Asset::register($this);
+\set_st\filter\assets\Asset::register($this);
 ?>
 <div class="filter-index">
     <p>

@@ -1,6 +1,6 @@
 <?php
 
-namespace dvizh\filter\models;
+namespace set_st\filter\models;
 
 use yii;
 

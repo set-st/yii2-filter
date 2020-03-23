@@ -1,5 +1,5 @@
 <?php
-namespace dvizh\filter\widgets;
+namespace set_st\filter\widgets;
 
 use dvizh\filter\models\Filter;
 use dvizh\filter\models\FilterVariants;

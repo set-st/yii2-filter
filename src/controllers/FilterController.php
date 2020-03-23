@@ -1,5 +1,5 @@
 <?php
-namespace dvizh\filter\controllers;
+namespace set_st\filter\controllers;
 
 use yii;
 use dvizh\filter\models\Filter;

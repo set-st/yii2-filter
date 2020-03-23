@@ -1,5 +1,5 @@
 <?php
-namespace dvizh\filter\assets;
+namespace set_st\filter\assets;
 
 use yii\web\AssetBundle;
 

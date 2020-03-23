@@ -1,5 +1,5 @@
 <?php
-namespace dvizh\filter\models\tools;
+namespace set_st\filter\models\tools;
 
 use yii;
 use yii\base\Model;

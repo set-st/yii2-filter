@@ -1,5 +1,5 @@
 <?php
-namespace dvizh\filter\widgets\types;
+namespace set_st\filter\widgets\types;
 
 use yii\helpers\Html;
 use yii\helpers\Url;
@@ -13,7 +13,7 @@ class Checkbox extends \yii\base\Widget
     
     public function init()
     {
-        \dvizh\filter\assets\VariantsAsset::register($this->getView());
+        \set_st\filter\assets\VariantsAsset::register($this->getView());
         parent::init();
     }
 
